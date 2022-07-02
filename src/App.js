@@ -1,4 +1,5 @@
 import "./App.css";
+import { useState } from "react";
 import Download from "./Images/Download.svg";
 import Home from "./Images/Home.svg";
 import More from "./Images/More.svg";
@@ -10,38 +11,66 @@ import Saved from "./Images/Saved.svg";
 import RightsidePic from "./Images/Side Pic.svg";
 import Search from "./Images/Pin.svg";
 import HomeFile from "./Home";
+import { Routes, Route } from "react-router-dom";
+import IndividualPost from "./IndividualPost";
+import { Link } from "react-router-dom";
 
 function App() {
+  const [home, setHome] = useState(true);
+  const [post, setPost] = useState(false);
+
+  const click1 = () => {
+    if (home === false) {
+      setHome((current) => !current);
+      if (post) {
+        setPost(false);
+      }
+    }
+  };
+
+  const click2 = () => {
+    if (post === false) {
+      setPost((current) => !current);
+      if (home) {
+        setHome(false);
+      }
+    }
+  };
+
   return (
     <div className="app">
       <div className="home_left">
         <div className="logo">LOGO</div>
         <div className="sidebar">
-          <div>
-            <img src={Home} alt="Home" />
-            <span>Home</span>
-          </div>
-          <div>
+          <Link to="/" style={{ textDecoration: "none" }} onClick={click1}>
+            <div className="innerdiv" style={{ color: home ? "#000000" : "" }}>
+              <img src={Home} alt="Home" />
+              <span>Home</span>
+            </div>
+          </Link>
+          <div className="innerdiv" style={{ marginLeft: "-7px" }}>
             <img src={Notifications} alt="Notifications" />
             <span>Notifications</span>
           </div>
-          <div>
-            <img src={Notes} alt="Topics" />
-            <span>Topics</span>
-          </div>
-          <div>
+          <Link to="/post" style={{ textDecoration: "none" }} onClick={click2}>
+            <div className="innerdiv" style={{ color: post ? "#000000" : "" }}>
+              <img src={Notes} alt="Topics" />
+              <span>Topics</span>
+            </div>
+          </Link>
+          <div className="innerdiv">
             <img src={Saved} alt="Bookmarks" />
             <span>Bookmarks</span>
           </div>
-          <div>
+          <div className="innerdiv">
             <img src={Download} alt="Archieved" />
             <span>Archieved</span>
           </div>
-          <div>
+          <div className="innerdiv">
             <img src={Profile} alt="Profile" />
             <span>Profile</span>
           </div>
-          <div>
+          <div className="innerdiv">
             <img src={More} alt="More" />
             <span>More</span>
           </div>
@@ -49,7 +78,10 @@ function App() {
       </div>
       <hr />
       <div className="home_center">
-        <HomeFile />
+        <Routes>
+          <Route path="/" element={<HomeFile />} />
+          <Route path="/post" element={<IndividualPost />} />
+        </Routes>
       </div>
       <hr />
       <div className="home_right">

@@ -35,7 +35,7 @@
   align-items: center;
   font-size: 36px;
   font-weight: 400;
-
+  cursor: pointer;
   color: #116530;
   margin-top: 17px;
 }
@@ -48,7 +48,7 @@
   height: 400px;
   margin-top: 90px;
 }
-.sidebar > div {
+.innerdiv {
   width: 100%;
   display: flex;
   align-items: center;
@@ -56,8 +56,12 @@
   color: #6c6b6b;
   font-size: 18px;
   font-weight: 400;
+  cursor: pointer;
 }
-.sidebar > div > img {
+.innerdiv:hover {
+  color: #000000;
+}
+.innerdiv > img {
   margin-right: 30px;
 }
 .searchbar {

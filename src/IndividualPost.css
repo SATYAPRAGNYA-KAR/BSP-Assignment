@@ -1,0 +1,125 @@
+.individual_post {
+  width: calc(732 / 1802 * 100vw);
+  display: flex;
+  flex-direction: column;
+}
+.individualpost_top {
+  width: 100%;
+  height: 66px;
+  background-color: #000000;
+  margin-top: 23px;
+  display: flex;
+  align-items: center;
+}
+.individualpost_top > span {
+  color: #ffffff;
+}
+.individualpost_top > img {
+  cursor: pointer;
+}
+.tag {
+  width: 104px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  background-color: #5c63ab;
+  color: #ffffff;
+  padding: 2px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.tag > span {
+  font-size: 14px;
+  font-weight: 400;
+  margin-left: 5px;
+}
+.postgirl {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.creator_section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+.creator_section > img {
+  cursor: pointer;
+}
+.creator {
+  display: flex;
+  align-items: center;
+}
+.creator > img {
+  margin-right: 10px;
+  cursor: pointer;
+}
+.creator > span {
+  font-size: 18px;
+  font-weight: 700;
+}
+.postgirl > p {
+  margin-top: 10px;
+  margin-left: 64px;
+  font-size: 16px;
+  font-weight: 400;
+}
+.post_container {
+  background-color: #ff9999;
+  width: 573px;
+  height: 247px;
+  display: flex;
+  justify-content: center;
+  border-radius: 36px;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+.postgirl > img {
+  margin-top: 17px;
+  width: 523px;
+  margin-left: 30px;
+  cursor: pointer;
+}
+.postgirl > hr {
+  margin-top: 20px;
+  border: 1px solid #e7d9d9;
+}
+.comment {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.comment_top > span {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  color: #575656;
+}
+.comment > p {
+  margin-top: 10px;
+  margin-left: 64px;
+  font-size: 16px;
+  font-weight: 400;
+}
+.comment_bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+.comment_bottom > span {
+  margin-left: 70px;
+  font-size: 15px;
+  font-weight: 400;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.comment_icons > img {
+  cursor: pointer;
+}
